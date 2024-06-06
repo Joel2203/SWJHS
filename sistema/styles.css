@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    border: 1px solid #ccc;
+    width: 500px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    margin: 0 10px;
+}
+
+.column h2 {
+    text-align: center;
+}
+
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    .kanban-board {
+      flex-direction: column;
+    }
+  
+    .column {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 978px) {
+    .kanban-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  
+    .column {
+        width: 50%;
+        margin: 10px 0;
+    }
+  }
+  
+  @media screen and (min-width: 978px) and (max-width: 1100px) {
+    .kanban-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  
+    .column {
+      width: calc(50% - 10px); /* 50% width con un margen de 10px entre columnas */
+      margin: 10px 0;
+    }
+  }
+  
+  @media screen and (min-width: 1100px) and (max-width: 1575px) {
+    .kanban-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 30px;
+    }
+  
+    .column {
+      width: calc(25% - 10px); /* 25% width con un margen de 10px entre columnas */
+      margin: 20px 0;
+    }
+  }
+  
+  
+  
+  
+  
