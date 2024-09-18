@@ -113,6 +113,75 @@
 	</li>
 	<?php } ?>
 
+	<?php if (verificarPermiso($permisos, 2) == 2) { ?>
+		<!-- Nav Item - Pages Collapse Menu -->
+		<li class="nav-item">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCollections" aria-expanded="true" aria-controls="collapseCollections">
+	    	<i class="fas fa-money-bill"></i> 
+			<span>Cobranza</span>
+		</a>
+		<div id="collapseCollections" class="collapse" aria-labelledby="headingcollapseCollections" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+			<?php if (verificarmostrarDatos(mostrarDatos(1), 1) != -1) { ?>
+				<a class="collapse-item" href="./registro_collection.php">Nueva Cobranza</a>
+				<?php } ?>
+			<?php if (verificarmostrarDatos(mostrarDatos(1), 2) != -1) { ?>
+				<a class="collapse-item" href="./lista_collection.php">Lista de Cobranzas</a>
+				<a class="collapse-item" href="./generar_factura.php">Generar Factura</a>
+				<a class="collapse-item" href="./generar_orden_de_compra.php">Generar Or.de Trabajo</a>
+				<?php } ?>
+			<?php if (verificarmostrarDatos(mostrarDatos(1), 2) != -1) { ?>
+				<a class="collapse-item" href="./lista_orden_de_trabajo.php">Lista de Trabajo</a>
+				<?php } ?>
+			</div>
+		 
+		</div>
+	</li>
+	<?php } ?>
+
+	<?php if (verificarPermiso($permisos, 7) == 7) { ?>
+		<!-- Nav Item - Pages Collapse Menu -->
+		<li class="nav-item">
+			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSales" aria-expanded="true" aria-controls="collapseSales">
+			<i class="fas fa-chart-line"></i>  
+            <i class="fas fa-arrow-up"></i>  
+				<span>Oportunidades</span>
+			</a>
+			<div id="collapseSales" class="collapse" aria-labelledby="headingCollapseSales" data-parent="#accordionSidebar">
+				<div class="bg-white py-2 collapse-inner rounded">
+				<?php if (verificarmostrarDatos(mostrarDatos(6), 1) != -1) { ?>
+					<a class="collapse-item" href="./registro_sales.php">Crear oportunidad</a>
+					<?php } ?>
+					<?php if (verificarmostrarDatos(mostrarDatos(6), 2) != -1) { ?>
+					<a class="collapse-item" href="./lista_oportunidades_1.php">Mis Oportunidades</a>
+					<?php } ?>
+				</div>
+			</div>
+		</li>
+		<?php } ?>
+
+		<?php if (verificarPermiso($permisos, 6) == 6) { ?>
+		<!-- Nav Item - Pages Collapse Menu -->
+		<li class="nav-item">
+			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActivities" aria-expanded="true" aria-controls="collapseActivities">
+			    <i class="fas fa-list"></i>  
+				<i class="far fa-calendar-check"></i>
+				<span>Actividades</span>
+			</a>
+			<div id="collapseActivities" class="collapse" aria-labelledby="headingcollapseActivities" data-parent="#accordionSidebar">
+				<div class="bg-white py-2 collapse-inner rounded">
+				<?php if (verificarmostrarDatos(mostrarDatos(5), 1) != -1) { ?>
+					<a class="collapse-item" href="./lista_tarea.php">Lista de Actividades</a>
+					<?php } ?>
+					<?php if (verificarmostrarDatos(mostrarDatos(5), 2) != -2) { ?>
+					<a class="collapse-item" href="./lista_tareas_view.php">Ver mis Actividades</a>
+					<?php } ?>	
+				</div>
+			</div>
+		</li>
+		<?php } ?>
+
+
 	
 	<?php if (verificarPermiso($permisos, 4) == 4) { ?>
 	<!-- Nav Item - Pages Collapse Menu -->
@@ -139,6 +208,27 @@
 		</div>
 	</li>
 	<?php } ?>
+
+	<?php if (verificarPermiso($permisos, 5) == 5) { ?>
+		<!-- Nav Item - Pages Collapse Menu -->
+		<li class="nav-item">
+			<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAccount" aria-expanded="true" aria-controls="collapseAccount">
+			   <i class="fas fa-users"></i>  <i class="fas fa-money-bill"></i>  
+				<span>Todas las Cuentas</span>
+			</a>
+			<div id="collapseAccount" class="collapse" aria-labelledby="headingcollapseAccount" data-parent="#accordionSidebar">
+				<div class="bg-white py-2 collapse-inner rounded">
+				<?php if (verificarmostrarDatos(mostrarDatos(4), 1) != -1) { ?>
+					<a class="collapse-item" href="./registro_allaccount.php">Nueva Cuenta</a>
+					<?php } ?>
+					<?php if (verificarmostrarDatos(mostrarDatos(4), 2) != -1) { ?>	
+					<a class="collapse-item" href="./lista_allaccount.php">Accounts</a>
+					<?php } ?>
+				</div>
+			</div>
+		</li>
+		<?php } ?>
+
 	
 
 		<?php if (verificarPermiso($permisos, 9) == 9) { ?>

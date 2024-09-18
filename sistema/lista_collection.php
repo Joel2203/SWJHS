@@ -7,7 +7,7 @@ $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http
 
 	<!-- Page Heading -->
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
-		<h1 class="h3 mb-0 text-gray-800">Collection</h1>
+		<h1 class="h3 mb-0 text-gray-800">Cobranza</h1>
 		<form action="./includes/excel_collection.php" method="POST">
 		<input type="hidden" class="form-control" name="user" value="<?php echo $_SESSION['idUser']; ?>">
 		<br>
